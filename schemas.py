@@ -4,15 +4,16 @@ from typing import List, Union, Optional
 class SongCreate(BaseModel):
     title: str
     artist: List[str]
-    genre: Optional[str] = None
+    playlist: Optional[str] = None
     original_key: Optional[str] = None
     difficulty: Optional[str] = None
     content: str
 
 class SongBase(BaseModel):
+    slug: str
     title: str
     artist: List[str]
-    genre: Optional[str] = None
+    playlist: Optional[str] = None
     original_key: Optional[str] = None
     difficulty: Optional[str] = None
 

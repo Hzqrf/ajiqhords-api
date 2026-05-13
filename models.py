@@ -6,9 +6,10 @@ class Song(Base):
     __tablename__ = "songs"
 
     id = Column(Integer, primary_key=True, index=True)
+    slug = Column(String(255), unique=True, index=True)
     title = Column(String(255), index=True)
     artist = Column(String(255), index=True)
-    genre = Column(String(100), index=True)
+    playlist = Column(String(100), index=True)
     original_key = Column(String(10))
     difficulty = Column(String(50))
     content = Column(Text)
